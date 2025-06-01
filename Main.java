@@ -34,7 +34,7 @@ public class Main {
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection conn = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/userdb", "touya", "nandhu");
+                            "jdbc:mysql://localhost:3306/userdb", "user", "pass");
 
                     String sql = "INSERT INTO users (name, email, phone, password) VALUES (?, ?, ?, ?)";
                     PreparedStatement stmt = conn.prepareStatement(sql);
@@ -64,7 +64,7 @@ public class Main {
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection conn = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/userdb", "touya", "nandhu");
+                            "jdbc:mysql://localhost:3306/userdb", "user", "pass");
 
                     String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
                     PreparedStatement stmt = conn.prepareStatement(sql);
@@ -107,7 +107,7 @@ public class Main {
 
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection conn = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/userdb", "touya", "nandhu");
+                            "jdbc:mysql://localhost:3306/userdb", "user", "pass");
 
                     String sql = "INSERT INTO books (title, author, isbn, publication_year) VALUES (?, ?, ?, ?)";
                     PreparedStatement stmt = conn.prepareStatement(sql);
